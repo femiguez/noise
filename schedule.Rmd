@@ -1,0 +1,27 @@
+---
+title: "Noise by Daniel Kahneman"
+date: "05/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+```
+
+# Schedule
+
+```{r, echo = FALSE}
+dates <- seq(from = as.Date("2021-05-11"),
+             to = as.Date("2021-08-31"), by = 7)
+topics <- c("Pre-Noise Judgment under Uncertainty: Heuristics and Biases", 
+            "Pre-Noise: Thinking Fast and Slow",
+            "Chapter 1: ...",
+            paste("Chapter", 2:15))
+presenter <- c("Miguez", "Miguez", "Laurent", "Chiozza", "Hartman", "Nichols",
+               "Cleveringa", "Miguez", "Laurent", "Chiozza", "Hartman", 
+               "Nichols", "Cleveringa", "Laurent", "Chiozza", "Hartman", rep("Miguez", 1))
+sch <- data.frame(dates = dates, topic = topics, presenter = presenter)
+kable(sch)
+```
+
